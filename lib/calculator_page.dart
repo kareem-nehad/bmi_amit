@@ -1,4 +1,6 @@
+import 'package:bmi_amit/results_page.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 import 'gender_card.dart';
 
@@ -154,7 +156,19 @@ class _CalculatorPageState extends State<CalculatorPage> {
           ),
           const Spacer(),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Navigator.pushNamed(context, '/resultsPage');
+
+              var bmi = weight / pow(height / 100, 2);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ResultsPage(bmi: bmi);
+                  },
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
               fixedSize: Size(MediaQuery.of(context).size.width, 45),

@@ -1,4 +1,5 @@
 import 'package:bmi_amit/calculator_page.dart';
+import 'package:bmi_amit/results_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,10 +17,7 @@ class BMIApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: '/',
-      routes: {
-        '/' : (context) => CalculatorPage(),
-      },
+      home: CalculatorPage(),
     );
   }
 }
