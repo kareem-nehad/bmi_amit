@@ -5,6 +5,7 @@ import 'gender_card.dart';
 class CalculatorPage extends StatefulWidget {
   const CalculatorPage({super.key});
 
+
   @override
   State<CalculatorPage> createState() => _CalculatorPageState();
 }
