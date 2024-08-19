@@ -152,19 +152,18 @@ class _CalculatorPageState extends State<CalculatorPage> {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           ElevatedButton(
             onPressed: () {},
-            child: Text(
-              'CALCULATE',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 26
-              ),
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+              fixedSize: Size(MediaQuery.of(context).size.width, 45),
+              backgroundColor: Colors.amber,
             ),
-            style:
-                ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)), fixedSize: Size(MediaQuery.of(context).size.width, 45), backgroundColor: Colors.amber),
+            child: const Text(
+              'CALCULATE',
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 26),
+            ),
           )
         ],
       ),
